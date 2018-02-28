@@ -61,7 +61,6 @@
                 <%= nav_link AdminController, label: 'User Data', action: :users %>
                 <%= nav_link AdminController, label: 'Invalidated Feedback', action: :recently_invalidated %>
                 <%= nav_link AdminController, label: 'Feedback via API', action: :api_feedback %>
-                <%= nav_link DashboardController, label: 'Database Dumps', action: :db_dumps %>
                 <% if current_user.moderator? %>
                   <%= nav_link StackExchangeUsersController, label: 'Spammers', action: :sites %>
                 <% end %>
@@ -89,6 +88,7 @@
                     TODO:  Make the `class="text-danger"` part actually adjust the color of the item
                     (currently, it’s overridden with `.dropdown-menu > li > a` in Bootstrap)
                   %>
+                  <%= nav_link DashboardController, label: 'Database Dumps', action: :db_dumps %>
                   <%= nav_link DeveloperController, label: 'Production log', action: :production_log %>
                 <% end %>
               <% end %>
